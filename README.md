@@ -10,6 +10,6 @@
 - Creating the react template for the app
 
 # day-three
-testing the second method for the frontend
+- testing the second method for the frontend
 
 
