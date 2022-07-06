@@ -1,15 +1,42 @@
-import React from "react"
+import React from "react";
+import {
+  Box,
+  FormControl,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  Radio
+} from "@mui/material";
 
 export default function Question(props) {
-    const question=props.question;
-    const answers=props.answers;
-    const score=props.score;
-
-    return(
-        <div>
-        <h1>{question}</h1>
-        <input>{answers}</input>
-        <h1>{score}</h1>
-        </div>        
-    );
+  return (
+    <Box sx={{display: "flex", justifyContent: "center", boxShadow:" rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px", margin: "3rem auto", backgroundColor: "#EEEEFF", padding: "2rem", width : "50%"}}>
+      <FormControl>
+        <FormLabel id="demo-radio-buttons-group-label">
+          {props.question}
+        </FormLabel>
+        <RadioGroup
+          aria-labelledby="demo-radio-buttons-group-label"
+          defaultValue="female"
+          name="radio-buttons-group"
+        >
+          <FormControlLabel
+            value={props.answers[0]}
+            control={<Radio />}
+            label={props.answers[0]}
+          />
+          <FormControlLabel
+            value={props.answers[1]}
+            control={<Radio />}
+            label={props.answers[1]}
+          />
+          <FormControlLabel
+            value={props.answers[2]}
+            control={<Radio />}
+            label={props.answers[2]}
+          />
+        </RadioGroup>
+      </FormControl>
+    </Box>
+  );
 }

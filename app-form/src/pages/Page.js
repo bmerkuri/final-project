@@ -4,8 +4,9 @@ import Question from "../Questions/Question";
 function Page() {
   return (
     <div>
-      <h1>Questios</h1>
-      <Question />
+      <Question answers = {["hjdghs", "hello", "beni", "ale"]} question = "What is your name?"/>
+      <Question answers = {["20", "21", "24", "35"]} question = "How old are you?"/>
+    
     </div>
   );
 }
