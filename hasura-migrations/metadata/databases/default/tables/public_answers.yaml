@@ -1,0 +1,63 @@
+table:
+  name: answers
+  schema: public
+object_relationships:
+  - name: board
+    using:
+      foreign_key_constraint_on: board_id
+  - name: boardByUserId
+    using:
+      foreign_key_constraint_on: user_id
+select_permissions:
+  - role: anonymous
+    permission:
+      columns:
+        - id
+        - board_id
+        - question_id
+        - user_id
+        - data
+        - score
+        - notes
+        - created_at
+        - updated_at
+      filter: {}
+  - role: backend
+    permission:
+      columns:
+        - id
+        - board_id
+        - question_id
+        - user_id
+        - data
+        - score
+        - notes
+        - created_at
+        - updated_at
+      filter: {}
+  - role: backoffice
+    permission:
+      columns:
+        - id
+        - board_id
+        - question_id
+        - user_id
+        - data
+        - score
+        - notes
+        - created_at
+        - updated_at
+      filter: {}
+  - role: form
+    permission:
+      columns:
+        - id
+        - board_id
+        - question_id
+        - user_id
+        - data
+        - score
+        - notes
+        - created_at
+        - updated_at
+      filter: {}

@@ -1,1 +1,18 @@
-[]
+- comment: null
+  definition:
+    query:
+      collection_name: allowed-queries
+      query_name: answer
+  methods:
+    - GET
+  name: answer
+  url: answer
+- comment: null
+  definition:
+    query:
+      collection_name: allowed-queries
+      query_name: question
+  methods:
+    - GET
+  name: question
+  url: question

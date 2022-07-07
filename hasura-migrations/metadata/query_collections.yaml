@@ -1,1 +1,21 @@
-[]
+- name: allowed-queries
+  definition:
+    queries:
+      - name: answer
+        query: |
+          query MyQuery {
+          	answers {
+          		id
+          		data
+          		notes
+          	}
+          }
+      - name: question
+        query: |
+          query MyQuery {
+          	questions {
+          		id
+          		data
+          		type
+          	}
+          }
