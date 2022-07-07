@@ -1,6 +1,8 @@
 import { useQuery, gql } from "../../services/hasura-client";
 import Page from "../../components/Page";
 import { Logout } from "./Logout";
+import { Route, Routes } from "react-router-dom";
+import  Login  from "./Login";
 
 const PING_ACTION_QUERY = gql`
   query {
@@ -14,10 +16,18 @@ export const App = () => {
   const { isSuccess, data } = useQuery("PingAction", PING_ACTION_QUERY);
 
   return (
-    <Page withPadding title={"Survey App"} actions={<Logout />}>
-      {isSuccess
-        ? `Computer says: ${new Date(data.ping.timestamp)}`
-        : "loading time..."}
-    </Page>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Page withPadding title={"Survey App"} actions={<Logout />}>
+            {isSuccess
+              ? `Computer says: ${new Date(data.ping.timestamp)}`
+              : "loading time..."}
+          </Page>
+        }
+      />
+      <Route path="/Login" element={<Login />} />
+    </Routes>
   );
 };
