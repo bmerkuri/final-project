@@ -18,8 +18,8 @@
 # day-two
 - Discussing methods for implemeting template
 We discussed different methods on how to implement the frontend.We had two main methods:
-a. using a library called surveyjs
-b.using routes and component to house the questions
+- a. using a library called surveyjs
+- b.using routes and component to house the questions
 - Testing the first method
 We decided to use the surveyjs method.We build the frontend with the questions and answers.The web app became very responsive and we styled the app to have a better UX/UI.
 - Creating the react template for the app
@@ -30,9 +30,9 @@ There was a issue with this method and that was that the questions were hard cod
 
 # day-three
 - testing the second method for the frontend
-We decided to test the second method and that was building the component for the questions and then calling them.
-We stumbled upon some problems with these methods.
-1.The app didn't allow us to configure the routing.After a lot of trail and error we decided to abandon the idea of routing.
-2.We then discussed on how to implement the GET and POST methods.We stumbled in a lot of errors. 
+-We decided to test the second method and that was building the component for the questions and then calling them.
+-We stumbled upon some problems with these methods.
+- 1.The app didn't allow us to configure the routing.After a lot of trail and error we decided to abandon the idea of routing.
+- 2.We then discussed on how to implement the GET and POST methods.We stumbled in a lot of errors. 
 
 
