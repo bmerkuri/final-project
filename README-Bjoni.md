@@ -53,7 +53,7 @@ We started very good and finally managed to finish the react frontend.
 We built the endpoints,fetched data from the database and fixed all the errors that came our way such as:
 - hasura permission error
 - react error
-- undified data fetch erro
+- undefined data fetch error
 - etc
 
 
