@@ -37,12 +37,12 @@ export const Page = () => {
 
   return (
     <Question
-      key={question.questions[0].id}
+      key={question.questions[0].data.id}
       question={question.questions[0].data.question}
       answers={[
-        answers.answers[0].data.answer,
-        answers.answers[1].data.answer,
-        answers.answers[2].data.answer
+        answers.answers[0].data.opsion1,
+        answers.answers[1].data.question2,
+        answers.answers[2].data.opsion1
       ]}
     />
   );

@@ -93,30 +93,30 @@ VALUES(10,10,'{"question":"Php is used for :"}','question10');
 
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(1,1,1,1,10,'{"opsion1":"30%","question2":"60%","opsion3":"90%"}');
+VALUES(1,1,1,1,10,'{"opsion1":"30%","opsion2":"60%","opsion3":"90%"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(2,2,2,2,10,'{"opsion1":"Javascript","question2":"Php","opsion3":"Ruby"}');
+VALUES(2,2,2,2,10,'{"opsion1":"Javascript","opsion2":"Php","opsion3":"Ruby"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(3,3,3,3,10,'{"opsion1":"NodeJs","question2":"Laravel","opsion3":"Django"}');
+VALUES(3,3,3,3,10,'{"opsion1":"NodeJs","opsion2":"Laravel","opsion3":"Django"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(4,4,4,4,10,'{"opsion1":"Python","question2":"Java","opsion3":"Javascript"}');
+VALUES(4,4,4,4,10,'{"opsion1":"Python","opsion2":"Java","opsion3":"Javascript"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(5,5,5,5,10,'{"opsion1":"Java","question2":"Ruby","opsion3":"C"}');
+VALUES(5,5,5,5,10,'{"opsion1":"Java","opsion2":"Ruby","opsion3":"C"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(6,6,6,6,10,'{"opsion1":"Programming Language","question2":"Framework","opsion3":"Tool"}');
+VALUES(6,6,6,6,10,'{"opsion1":"Programming Language","opsion2":"Framework","opsion3":"Tool"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(7,7,7,7,10,'{"opsion1":"Programming Language","question2":"Hypertext Markup Language","opsion3":"Framework"}');
+VALUES(7,7,7,7,10,'{"opsion1":"Programming Language","opsion2":"Hypertext Markup Language","opsion3":"Framework"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(8,8,8,8,10,'{"opsion1":"Google","question2":"Microsoft","opsion3":"By me"}');
+VALUES(8,8,8,8,10,'{"opsion1":"Google","opsion2":"Microsoft","opsion3":"By me"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(9,9,9,9,10,'{"opsion1":"Web development","question2":"Mobile development","opsion3":"Desktop Development"}');
+VALUES(9,9,9,9,10,'{"opsion1":"Web development","opsion2":"Mobile development","opsion3":"Desktop Development"}');
 
 
