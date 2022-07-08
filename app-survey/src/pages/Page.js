@@ -12,7 +12,7 @@ export const Page = () => {
   useEffect(() => {
     axios
       .get(
-        "https://8080-bmerkuri-finalproject-yzvokinvaxu.ws-eu51.gitpod.io/api/rest/question"
+        "https://8080-bmerkuri-finalproject-xomtuvqx7v4.ws-eu51.gitpod.io/api/rest/question"
       )
       .then((res) => {
         setQuestion(res.data);
@@ -23,7 +23,7 @@ export const Page = () => {
   useEffect(() => {
     axios
       .get(
-        "https://8080-bmerkuri-finalproject-yzvokinvaxu.ws-eu51.gitpod.io/api/rest/answer"
+        "https://8080-bmerkuri-finalproject-xomtuvqx7v4.ws-eu51.gitpod.io/api/rest/answer"
       )
       .then((res) => {
         setAnswers(res.data);
@@ -41,8 +41,8 @@ export const Page = () => {
       question={question.questions[0].data.question}
       answers={[
         answers.answers[0].data.opsion1,
-        answers.answers[1].data.question2,
-        answers.answers[2].data.opsion1
+        answers.answers[0].data.opsion2,
+        answers.answers[0].data.opsion3
       ]}
     />
   );

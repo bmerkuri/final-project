@@ -88,8 +88,6 @@ VALUES(8,8,'{"question":"On Rails"}','question8');
 INSERT INTO "public"."questions" ("id","board_id","data","type")
 VALUES(9,9,'{"question":"Dart is a langauge developed by"}','question9');
 
-INSERT INTO "public"."questions" ("id","board_id","data","type")
-VALUES(10,10,'{"question":"Php is used for :"}','question10');
 
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
