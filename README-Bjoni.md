@@ -57,7 +57,7 @@ We built the endpoints,fetched data from the database and fixed all the errors t
 - etc
 ########################################################################################################
 # day-five
-This day progress was kind of slow.The objective of thsi day was to show all the questions and answers fetched from the database at once.
+This day progress was kind of slow.The objective of this day was to show all the questions and answers fetched from the database at once.
 We stumbled on a lof of errors at this step.
 The maain problem was how to loop through the json file to show all the questions and answers.
 We tried different kinds of loops like a for loop,while loop etc.None of them worked.
