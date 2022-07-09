@@ -14,7 +14,7 @@ export const Page = () => {
   useEffect(() => {
     axios
       .get(
-        "https://8080-bmerkuri-finalproject-44jjfxq8wsx.ws-eu51.gitpod.io/api/rest/question"
+        "https://8080-bmerkuri-finalproject-6weoukpiglv.ws-eu53.gitpod.io/api/rest/question"
       )
       .then((res) => {
         setQuestion(res.data);
@@ -25,10 +25,10 @@ export const Page = () => {
   useEffect(() => {
     axios
       .get(
-        "https://8080-bmerkuri-finalproject-44jjfxq8wsx.ws-eu51.gitpod.io/api/rest/answer"
+        "https://8080-bmerkuri-finalproject-6weoukpiglv.ws-eu53.gitpod.io/api/rest/answer"
       )
       .then((res) => {
-        console.log("responseAnswer", res.data);
+        // console.log("responseAnswer", res.data);
         setAnswers(res.data);
         setAnswersLoading(false);
       });
@@ -41,15 +41,16 @@ export const Page = () => {
   return (
     <div>
       {/* {console.log("1",answer?.answers.find(ele => ele.id === "1"))} */}
-      {console.log(answer?.answers?.find(element => element.id === 1))}
-      {console.log("answer", answer)}
+      {/* {console.log(answer?.answers?.find((element) => element.id === 1))}
+      {console.log("answer", answer)} */}
       {question?.questions.map((element) => {
         return (
           <Question
-          
             key={element?.id}
             question={element?.data?.question}
-            answers = {(answer?.answers?.find(ele => ele?.id === element?.id))}
+            answers={answer?.answers?.map((element) => {
+              return console.log("Pergjigjet Finale", element?.data);
+            })}
             // answers={[
             //   answer.answers[0].data.opsion1,
             //   answer.answers[0].data.opsion2,
