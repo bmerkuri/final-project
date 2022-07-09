@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Question from "../Questions/Question";
+import "./surveyStyles.css"
 
 import axios from "axios";
 
@@ -13,7 +14,7 @@ export const Page = () => {
   useEffect(() => {
     axios
       .get(
-        "https://8080-bmerkuri-finalproject-uy3jj3r0joc.ws-eu53.gitpod.io/api/rest/question"
+        "https://8080-bmerkuri-finalproject-6gv1eha289z.ws-eu53.gitpod.io/api/rest/question"
       )
       .then((res) => {
         console.log("question",res.data);
@@ -25,7 +26,7 @@ export const Page = () => {
   useEffect(() => {
     axios
       .get(
-        "https://8080-bmerkuri-finalproject-uy3jj3r0joc.ws-eu53.gitpod.io/api/rest/answer"
+        "https://8080-bmerkuri-finalproject-6gv1eha289z.ws-eu53.gitpod.io/api/rest/answer"
       )
       .then((res) => {
         console.log("responseAnswer", res.data);
@@ -39,7 +40,7 @@ export const Page = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       {/* {console.log("1",answer?.answers.find(ele => ele.id === "1"))} */}
       {console.log(answer?.answers?.find(element => element?.id === 1))}
       {console.log("answer", answer)}
