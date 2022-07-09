@@ -26,28 +26,17 @@ export default function Question(props) {
         <FormLabel id="demo-radio-buttons-group-label">
           {props?.question}
         </FormLabel>
-        {console.log("answerProps", props?.answers)}
+        {console.log("answerProps", props?.answers?.data)}
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
           defaultValue="female"
           name="radio-buttons-group"
         >
-          {/* {props?.answers?.data.map((item) => console.log("item", item))}
-          <FormControlLabel
-            value={props.answers[0]}
-            control={<Radio />}
-            label={props.answers[0]}
-          />
-          <FormControlLabel
-            value={props.answers[1]}
-            control={<Radio />}
-            label={props.answers[1]}
-          />
-          <FormControlLabel
-            value={props.answers[2]}
-            control={<Radio />}
-            label={props.answers[2]}
-          /> */}
+          {Object.values(props?.answers?.data).map((ans) => {
+            return (
+              <FormControlLabel value={ans} control={<Radio />} label={ans} />
+            )
+          })}
         </RadioGroup>
       </FormControl>
     </Box>

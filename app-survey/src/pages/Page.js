@@ -9,15 +9,15 @@ export const Page = () => {
   const [answer, setAnswers] = useState([]);
   const [answersLoading, setAnswersLoading] = useState(true);
 
-  var content = [];
 
   useEffect(() => {
     axios
       .get(
-        "https://8080-bmerkuri-finalproject-6weoukpiglv.ws-eu53.gitpod.io/api/rest/question"
+        "https://8080-bmerkuri-finalproject-uy3jj3r0joc.ws-eu53.gitpod.io/api/rest/question"
       )
       .then((res) => {
-        setQuestion(res.data);
+        console.log("question",res.data);
+        setQuestion(res?.data);
         setIsLoading(false);
       });
   }, []);
@@ -25,11 +25,11 @@ export const Page = () => {
   useEffect(() => {
     axios
       .get(
-        "https://8080-bmerkuri-finalproject-6weoukpiglv.ws-eu53.gitpod.io/api/rest/answer"
+        "https://8080-bmerkuri-finalproject-uy3jj3r0joc.ws-eu53.gitpod.io/api/rest/answer"
       )
       .then((res) => {
-        // console.log("responseAnswer", res.data);
-        setAnswers(res.data);
+        console.log("responseAnswer", res.data);
+        setAnswers(res?.data);
         setAnswersLoading(false);
       });
   }, []);
@@ -41,55 +41,22 @@ export const Page = () => {
   return (
     <div>
       {/* {console.log("1",answer?.answers.find(ele => ele.id === "1"))} */}
-      {/* {console.log(answer?.answers?.find((element) => element.id === 1))}
-      {console.log("answer", answer)} */}
-      {question?.questions.map((element) => {
+      {console.log(answer?.answers?.find(element => element?.id === 1))}
+      {console.log("answer", answer)}
+      {question?.questions?.map((element) => {
+        console.log("element",element)
+        console.log(answer?.answers.find(ele => ele?.id === element?.id))
         return (
           <Question
             key={element?.id}
             question={element?.data?.question}
-            answers={answer?.answers?.map((element) => {
-              return console.log("Pergjigjet Finale", element?.data);
-            })}
-            // answers={[
-            //   answer.answers[0].data.opsion1,
-            //   answer.answers[0].data.opsion2,
-            //   answer.answers[0].data.opsion3
-            // ]}
+            answers = {(answer?.answers?.find(ele => ele?.id === element?.id))}
           />
         );
       })}
+      
     </div>
-
-    // <Question
-    //   key={question.questions[0].id}
-    //   question={question.questions[0].data.question}
-    //   answers={[
-    //     answer.answers[0].data.opsion1,
-    //     answer.answers[0].data.opsion2,
-    //     answer.answers[0].data.opsion3
-    //   ]}
-    // />
   );
-
-  // for (let i = 0; i < question.questions.length; i++) {
-
-  //   content.push(
-  //     <Question
-  //       key={question.questions[i].id}
-  //       question={question.questions[i].data.question}
-  //       answers={[
-  //         answer.answers[i].data.opsion1,
-  //         answer.answers[i].data.opsion2,
-  //         answer.answers[i].data.opsion3
-  //       ]}
-  //     />
-  //   );
-  // }
-
-  // content.map((element) => {
-  //   return element;
-  // });
 };
 
 export default Page;
