@@ -55,7 +55,19 @@ We built the endpoints,fetched data from the database and fixed all the errors t
 - react error
 - undefined data fetch error
 - etc
+########################################################################################################
+# day-five
+This day progress was kind of slow.The objective of thsi day was to show all the questions and answers fetched from the database at once.
+We stumbled on a lof of errors at this step.
+The maain problem was how to loop through the json file to show all the questions and answers.
+We tried different kinds of loops like a for loop,while loop etc.None of them worked.
+I thought that one of the problems was that we had 2 endpoints.So i created an endpoint that contained both answers and questions but we still had problems
+showing all the questions and answers.
+We asked one of our mentors for help and he instructed us to use a map function.
+With his help we finally managed to show all the questions.
+We still have issues regarding the answers part but hopefully we will solve them these days.
 
+#########
 
 
 
