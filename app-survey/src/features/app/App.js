@@ -1,33 +1,47 @@
 import { useQuery, gql } from "../../services/hasura-client";
 import Page from "../../components/Page";
 import { Logout } from "./Logout";
-import { Route, Routes } from "react-router-dom";
-import Login from "./Login";
-import Form from "../../pages/Page";
+import Question from "./Components/Question";
+import "./pageStyles/surveyStyles.css"
+
 
 const PING_ACTION_QUERY = gql`
-  query {
-    ping: ping_action {
-      timestamp
-    }
+query GetQuery {
+  answers {
+    data
+    id
   }
+  questions {
+    data
+    id
+  }
+}
 `;
 
 export const App = () => {
   const { isSuccess, data } = useQuery("PingAction", PING_ACTION_QUERY);
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Page withPadding title={"Survey App"} actions={<Logout />}>
-            {isSuccess}
-            <Form />
-          </Page>
-        }
-      />
-      <Route path="/Login" element={<Login />} />
-    </Routes>
+    <Page withPadding title={"Survey App"} actions={<Logout />}>
+      {isSuccess
+        ? <div className="container">
+        {/* {console.log("1",answer?.answers.find(ele => ele.id === "1"))} */}
+        {console.log(data?.answers?.find(element => element?.id === 1))}
+        {console.log("answer", data)}
+        {data?.questions?.map((element) => {
+          console.log("element",element)
+          console.log(data?.answers.find(ele => ele?.id === element?.id))
+          return (
+            <Question
+              key={element?.id}
+              question={element?.data?.question}
+              answers = {(data?.answers?.find(ele => ele?.id === element?.id))}
+            />
+          );
+        })}
+        
+      </div>
+        : "loading time..."}
+    </Page>
   );
 };
