@@ -7,7 +7,6 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import { Route, Link, Router, Routes } from "react-router-dom";
 import Login from "../app/Login";
-import Dashboard from "../app/Dashboard";
 import { useAuth } from "./use-auth";
 import { useNavigate } from "react-router-dom";
 
@@ -64,16 +63,6 @@ export const AuthLogin = () => {
       >
         Login with dev token
       </Button>
-      <Link to="/Dashboard" element={<Dashboard />}>
-        <Button
-          type="submit"
-          variant="contained"
-          onClick={DashboardClick}
-          fullWidth
-        >
-          Admin
-        </Button>
-      </Link>
     </Paper>
   );
 };
