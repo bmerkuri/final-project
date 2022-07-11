@@ -5,10 +5,11 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
-import { Route, Link, Router } from "react-router-dom";
+import { Route, Link, Router, Routes } from "react-router-dom";
 import Login from "../app/Login";
-
+import Dashboard from "../app/Dashboard";
 import { useAuth } from "./use-auth";
+import { useNavigate } from "react-router-dom";
 
 export const AuthLogin = () => {
   const { login } = useAuth();
@@ -17,54 +18,62 @@ export const AuthLogin = () => {
     token !== null && login(token);
   }, []);
 
+  const navigate = useNavigate();
+  const DashboardClick = () => navigate("/Dashboard", { replace: true });
+
   return (
-      <Paper
-        component="form"
-        onSubmit={(evt) => {
-          evt.preventDefault();
-          login(evt.target[0].value);
-        }}
-        sx={{
-          p: 5,
-          minWidth: 500
-        }}
+    <Paper
+      component="form"
+      onSubmit={(evt) => {
+        evt.preventDefault();
+        login(evt.target[0].value);
+      }}
+      sx={{
+        p: 5,
+        minWidth: 500
+      }}
+    >
+      <Box sx={{ mb: 2 }}>
+        <Typography variant="h4">Survey App</Typography>
+      </Box>
+      <Box sx={{ mb: 2 }}>
+        <TextField
+          type="text"
+          size="small"
+          name="token"
+          placeholder="Invitation token"
+          fullWidth
+        />
+      </Box>
+      <Box sx={{ mb: 2 }}>
+        <Link to="/Login" element={<Login />}>
+          <Button type="submit" variant="contained" fullWidth>
+            Login
+          </Button>
+        </Link>
+      </Box>
+      <Divider />
+      <Button
+        sx={{ mb: 2 }}
+        onClick={() =>
+          login(
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL2hhc3VyYS5pby9qd3QvY2xhaW1zIjp7IngtaGFzdXJhLWFsbG93ZWQtcm9sZXMiOlsiZm9ybSJdLCJ4LWhhc3VyYS1kZWZhdWx0LXJvbGUiOiJmb3JtIiwieC1oYXN1cmEtdXNlci1pZCI6Inh4eCIsIngtaGFzdXJhLWZvcm0taWQiOiJ4eHgifX0.uPC5oicDRxiqV7o8CbQH7lI3mzFilrwW4Ofz9SWfN8o"
+          )
+        }
+        fullWidth
       >
-        <Box sx={{ mb: 2 }}>
-          <Typography variant="h4">Survey App</Typography>
-        </Box>
-        <Box sx={{ mb: 2 }}>
-          <TextField
-            type="text"
-            size="small"
-            name="token"
-            placeholder="Invitation token"
-            fullWidth
-          />
-        </Box>
-        <Box sx={{ mb: 2 }}>
-          <Link to="/Login" element={<Login/>}>
-            <Button type="submit" variant="contained" fullWidth>
-              Login
-            </Button>
-          </Link>
-        </Box>
-        <Divider />
+        Login with dev token
+      </Button>
+      <Link to="/Dashboard" element={<Dashboard />}>
         <Button
-          onClick={() =>
-            login(
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwczovL2hhc3VyYS5pby9qd3QvY2xhaW1zIjp7IngtaGFzdXJhLWFsbG93ZWQtcm9sZXMiOlsiZm9ybSJdLCJ4LWhhc3VyYS1kZWZhdWx0LXJvbGUiOiJmb3JtIiwieC1oYXN1cmEtdXNlci1pZCI6Inh4eCIsIngtaGFzdXJhLWZvcm0taWQiOiJ4eHgifX0.uPC5oicDRxiqV7o8CbQH7lI3mzFilrwW4Ofz9SWfN8o"
-            )
-          }
+          type="submit"
+          variant="contained"
+          onClick={DashboardClick}
           fullWidth
         >
-          Login with dev token
+          Admin
         </Button>
-        <Link to="/Login" element={<Login/>}>
-            <Button type="button" variant="contained" fullWidth>
-              Login
-            </Button>
-          </Link>
-      </Paper>
-      
+      </Link>
+    </Paper>
   );
 };
