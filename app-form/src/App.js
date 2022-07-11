@@ -1,14 +1,17 @@
+import React from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Page from "./pages/Page";
+import { Get } from "./Graphql/Query";
+import { useQuery } from "@apollo/client";
 
 function App() {
+  const { loading, error, data } = useQuery(Get);
+  console.log(data);
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/questions" element={<Page />} />
-      </Routes>
-      </BrowserRouter>
+    <div>
+      <label>Question</label>
+      <input type="text" placeholder="Enter Question" />
+      <button type="Submit">Submit</button>
+    </div>
   );
 }
 

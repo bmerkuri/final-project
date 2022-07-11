@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.6.9",
     "@forrestjs/core": "^4.5.0",
     "@forrestjs/react-mui": "0.7.0",
     "@forrestjs/react-root": "0.7.0",
