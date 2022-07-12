@@ -10,6 +10,7 @@ import {
 
 export default function Question(props) {
   const [ans, setAns] = useState();
+  const [score, setScore] = useState(0);
 
   function setAnswerData(data) {
     setAns(data);
@@ -18,18 +19,29 @@ export default function Question(props) {
 
   useEffect(() => {
     if (localStorage.getItem("Answers") === null) {
-      if (typeof(ans) === 'object') {
+      if (typeof ans === "object") {
         localStorage.setItem("Answers", JSON.stringify(ans));
       }
     } else {
-      if (typeof(ans) === 'object') {
+      if (typeof ans === "object") {
         const oldStorage = localStorage.getItem("Answers");
-         localStorage.setItem("Answers", [oldStorage, JSON.stringify(ans)]);
+        localStorage.setItem("Answers", [oldStorage, JSON.stringify(ans)]);
       }
     }
 
     console.log(localStorage.getItem("Answers"));
   }, [ans]);
+
+  function handleClick(e) {
+    if (`${e.target.value}` === `${ans.answers[0]}`) {
+      setScore(10);
+    } else {
+      setScore(0);
+    }
+    console.log("Score", score);
+  }
+
+  console.log(score);
 
   return (
     <Box
@@ -77,6 +89,9 @@ export default function Question(props) {
             );
           })}
         </RadioGroup>
+        <button type="Submit" onClick={handleClick}>
+          Save
+        </button>
       </FormControl>
     </Box>
   );

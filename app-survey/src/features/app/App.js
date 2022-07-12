@@ -4,7 +4,6 @@ import { Logout } from "./Logout";
 import Question from "./Components/Question";
 import "./pageStyles/surveyStyles.css";
 
-
 const PING_ACTION_QUERY = gql`
   query GetQuery {
     answers {
@@ -21,29 +20,25 @@ const PING_ACTION_QUERY = gql`
 export const App = () => {
   const { isSuccess, data } = useQuery("PingAction", PING_ACTION_QUERY);
 
-  
-
   return (
     <Page withPadding title={"Survey App"} actions={<Logout />}>
       {isSuccess ? (
         <div className="container">
           {/* {console.log("1",answer?.answers.find(ele => ele.id === "1"))} */}
-          {console.log(data?.answers?.find((element) => element?.id === 1))}
-          {console.log("answer", data)}
+          {/* {console.log(data?.answers?.find((element) => element?.id === 1))}
+          {console.log("answer", data)} */}
           {data?.questions?.map((element) => {
             console.log("element", element);
             console.log(data?.answers.find((ele) => ele?.id === element?.id));
             return (
-              (
-                <Question
-                  key={element?.id}
-                  question={element?.data?.question}
-                  id={element?.id}
-                  answers={data?.answers?.find(
-                    (ele) => ele?.id === element?.id
-                  )}
-                />
-              )
+              <Question
+                key={element?.id}
+                question={element?.data?.question}
+                // anss={element?.data?.answers}
+                id={element?.id}
+                score={element?.answers?.data?.opsion1}
+                answers={data?.answers?.find((ele) => ele?.id === element?.id)}
+              />
             );
           })}
         </div>
