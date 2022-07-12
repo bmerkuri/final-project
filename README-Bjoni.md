@@ -41,7 +41,7 @@ The third and final file called the Question component.
 We did two tests with these methods.
 The first test was just trying out the surveyjs and see if it worked,gave any erros etc.
 The second test was most important.We had to add this form we just created to the jwt token login.We were worried on how to implement it at first.
-I then saw a youtube video and realised it was fairly pretty simple.:joy:
+I then saw a youtube video and realised it was fairly  simple.:joy:
 
 Everything was going great but we seemed to have forgetten something.:thinking:
 What we forgot was was that the questions were hard coded which violates the project requierement to get the questions and answers from the backend.
@@ -53,6 +53,7 @@ We basically had to start from scratch again but at least now we had a better id
 ---
 
 # Day-three
+
 - testing the second method for the frontend
 - 
 -We decided to test the second method and that was building the component for the questions and then calling them.
