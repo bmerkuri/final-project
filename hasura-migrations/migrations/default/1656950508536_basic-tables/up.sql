@@ -50,7 +50,11 @@ CREATE TABLE "public"."boards_admins" (
 );
 
 
-
+CREATE TABLE "public"."userResponse"(
+  "id" BIGSERIAL NOT NULL,
+  "data" JSON NOT NULL DEFAULT '{}',
+  CONSTRAINT "userResponse_id_pkey" FOREIGN KEY("id") REFERENCES "users"("id")
+);
 
 ---
 --- QUESTIONS
