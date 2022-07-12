@@ -20,19 +20,30 @@ Requirements
 ---
 
 # day-two
-- Discussed methods for implemeting template
-We discussed different methods on how to implement the frontend.We had two main methods:
+We started the day with a lot of motivation.We came together and started to discuss methods of implementing the template.
+We brainstormed different methods also googling some too and came to two methods which we thought were the best:
 1.  using a library called surveyjs
 2.  using routes and component to house the questions
-Testing the first method
 
-We decided to use the surveyjs method.
-We build the frontend with the questions and answers.The web app became very responsive and we styled the app to have a better UX/UI.
+We decided to test the first method a.k.a surveyjs.
+Building a form with surveyjs was fairly easy and simple.We basically had to go to the surveyjs website,create the question there by filling the missing places and copy the JSON format of those question.
+To implement the question in out code we had to do some coding.
+We built 3 files.
+The first file contained the JSON format
+The second file contained the Question component which dictated how the question would appear to the user.
+The third and final file called the Question component.
 
-- Creating the react template for the app
+We did two tests with these methods.
+The first test was just trying out the surveyjs and see if it worked,gave any erros etc.
+The second test was most important.We had to add this form we just created to the jwt token login.We were worried on how to implement it at first.
+I then saw a youtube video and realised it was fairly pretty simple.:joy:
 
-After we created the questions and answers ,we integrated the jwt login token to the app.Everything workout out fine.
-There was a issue with this method and that was that the questions were hard coded which violates the project requierement to get the questions and answers from the backend.
+Everything was going great but we seemed to have forgetten something.:thinking:
+What we forgot was was that the questions were hard coded which violates the project requierement to get the questions and answers from the backend.
+:expressionless:
+
+We basically had to start from scratch again but at least now we had a better idea about the project.
+
 
 ---
 
