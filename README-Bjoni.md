@@ -17,7 +17,7 @@ Requirements
 - Distributed Roles
 - Build datbase tables
 
-##########################################################################################################################################
+---
 
 # day-two
 - Discussed methods for implemeting template
