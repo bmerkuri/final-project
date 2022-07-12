@@ -62,17 +62,21 @@ The list below shows the erros :
    - We didn't even read the requierement proparly and wasted some time on a dumb idea :neutral_face:.
 3. We then discussed on how to implement the GET and POST methods.We stumbled in a lot of errors.
    - The errors were mainly with the endpoints and the get methods.
-   - We were instructed to use useEffect and axios and after some trial and error we finally managed to show one question and the answers corresponding to it. 
+   - We were instructed to use either queries,hasura actions or axios.
+We tested out the hasura actions but unfortunately we couldnt show the question on screen.
+
 
 ---
 # Day-four
 This day was a good day.
 We started very good and finally managed to finish the react frontend.
+
 We built the endpoints,fetched data from the database and fixed all the errors that came our way such as:
 - hasura permission error
 - react error
 - undefined data fetch error
 - etc
+We decided to use axios.After building the get methods and calling these methods on the Question component ,the app was up and running.
 
 ---
 
