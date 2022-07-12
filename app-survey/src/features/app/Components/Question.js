@@ -1,3 +1,4 @@
+import { setAnswerData } from "../App";
 import React from "react";
 import {
   Box,
@@ -8,7 +9,11 @@ import {
   Radio
 } from "@mui/material";
 
+
+export let storageData;
+
 export default function Question(props) {
+  
   return (
     <Box
       sx={{
@@ -23,22 +28,38 @@ export default function Question(props) {
         borderRadius: "10px",
         color: "white"
       }}
+
+      
     >
-      <FormControl style={{color: "white", textAlign:"left"}}>
-        <FormLabel id="demo-radio-buttons-group-label" style={{color: "white", textAlign:"left",width: "38ch"}}>
+      <FormControl style={{ color: "white", textAlign: "left" }}>
+        <FormLabel
+          id="demo-radio-buttons-group-label"
+          style={{ color: "white", textAlign: "left", width: "38ch" }}
+        >
           {props?.question}
         </FormLabel>
-        {console.log("answerProps", props?.answers?.data)}
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
           defaultValue="female"
           name="radio-buttons-group"
-          style={{color: "white", textAlign:"left"}}
+          style={{ color: "white", textAlign: "left" }}
         >
-          {Object.values(props?.answers?.data).map((ans) => {
+          {Object.values(props?.answers?.data).map((answer) => {
             return (
-              <FormControlLabel value={ans} control={<Radio />} label={ans} style={{accentColor: "white", textAlign:"left"}}/>
-            )
+              <FormControlLabel
+                value={answer}
+                control={<Radio />}
+                label={answer}
+                onChange={(e) => {
+                  storageData = {
+                    id: `${props?.id}`,
+                    question: `${props?.question}`,
+                    answer: `${e.target.value}`
+                  };
+                }}
+                style={{ accentColor: "white", textAlign: "left" }}
+              />
+            );
           })}
         </RadioGroup>
       </FormControl>

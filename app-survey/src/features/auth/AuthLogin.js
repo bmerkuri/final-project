@@ -5,20 +5,18 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
-import { Route, Link, Router, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Login from "../app/Login";
 import { useAuth } from "./use-auth";
-import { useNavigate } from "react-router-dom";
 
 export const AuthLogin = () => {
   const { login } = useAuth();
   useEffect(() => {
     const token = localStorage.getItem("at");
     token !== null && login(token);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const navigate = useNavigate();
-  const DashboardClick = () => navigate("/Dashboard", { replace: true });
 
   return (
     <Paper
