@@ -120,6 +120,5 @@ The code that Elvis did was fine ,we just needed to add a JSON.stringfy() method
 
 
 
-Setext Heading 2
-----------------
 
+[Google](www.google.com)
