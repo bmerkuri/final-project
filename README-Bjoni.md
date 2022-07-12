@@ -67,7 +67,26 @@ We asked one of our mentors for help and he instructed us to use a map function.
 With his help we finally managed to show all the questions.
 We still have issues regarding the answers part but hopefully we will solve them these days.
 
-#########
+############################################################################################################
+
+# day-six and day-seven
+I gathered the team on an online call to discuss about the project.
+We had many ideas but most if not all of them were regarding the post method.
+Ervis proposed the idea of adding a column to the table answers or just creating a new table all together.
+We decided to give it a try since we didnt have another idea at that moment.
+The rest of the day was spent searching and trying new methods for posting data.
+# day-eight
+Since it was a holiday,we didnt work as much so just a portion of the day was dedicated to the project.
+
+# day-nine
+Elvis showed us the sessions method he was working on.
+The session method allows us to store the users responses.
+We faced a couple of issues with these method:
+      1.it kept showing data as [object,Object]
+I searched up online and found the solution to this problem.
+The code that Elvis did was fine ,we just needed to add a JSON.stringfy() method to the getAnswers method so that we would read the object data as a string JSON.
+      2.We could't register the user response for each question.Everytime we tried to get the other question and answer,it deleted the previous question-answer and added the new one.
+      We asked Rezart(one of our mentors) for help.He did come up with a solution to put the data in an array but the app itself has a probelm.That problem was that it kept rendering all the time so the array pof objects was always zero.
 
 
 
