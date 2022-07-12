@@ -53,17 +53,16 @@ We basically had to start from scratch again but at least now we had a better id
 ---
 
 # Day-three
-
-- testing the second method for the frontend
-- 
--We decided to test the second method and that was building the component for the questions and then calling them.
--We stumbled upon some problems with these methods.
+As discussed in the previous day we decided to test out the second method that was proposed.
+The second method was about building a component for the Questions and then calling them
+We stumbled on a lot of errors with this method .
+The list below shows the erros :
 
 1. The app didn't allow us to configure the routing.After a lot of trail and error we decided to abandon the idea of routing.
-2. We then discussed on how to implement the GET and POST methods.We stumbled in a lot of errors.
- 
-We started studying hasura functions and implementing the examples we saw.
-The rest of the day was spent trying out different way to implement hasura actions.
+   - We didn't even read the requierement proparly and wasted some time on a dumb idea :neutral_face:.
+3. We then discussed on how to implement the GET and POST methods.We stumbled in a lot of errors.
+  - The errors were mainly with the endpoints and the get methods.
+  - We were instructed to use useEffect and axios and after some trial and error we finally managed to show one question and the answers corresponding to it. 
 
 ---
 # Day-four
