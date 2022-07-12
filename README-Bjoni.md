@@ -3,7 +3,7 @@
 Skill-Matrix is a project where the main goal is to collect data from the survey.This survey will contain many questions for a large amount of users in   different timestamps. The questions will be displayed in different types.
 
 Project Objectives
-- [ ] Building a survey app with haura and react
+- [ ] Building a survey app with haura and react 
 - [x] Getting the questions and answers from the hasura backend
 - [x] Getting the answer the user provides and sending it to the backend
 
@@ -12,10 +12,15 @@ Requirements
 - Building UX/UI
 - Build the unit testing
 
-      
+As it was the first day we wanted to understand the project better and also figure out each individual's abilities and distributing roles
+The list below containes the activities we followed that day:
 - Did Project BrainStorming with the team
+   - We started research the topic,We looked thorugh the references that marco sent us etc.
 - Distributed Roles
-- Build datbase tables
+   - When we started discussing our areas of expertise we found out that we had pretty much the same skills.
+   - I personally had more experience in java than Elvis and Frajdi and those two had more experience in react than me. 
+- Build database tables
+    -We created the tables based on the information that marco sent us.We made sure that everything was up and running. 
 
 ---
 
