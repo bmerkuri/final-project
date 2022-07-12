@@ -61,8 +61,8 @@ The list below shows the erros :
 1. The app didn't allow us to configure the routing.After a lot of trail and error we decided to abandon the idea of routing.
    - We didn't even read the requierement proparly and wasted some time on a dumb idea :neutral_face:.
 3. We then discussed on how to implement the GET and POST methods.We stumbled in a lot of errors.
-  - The errors were mainly with the endpoints and the get methods.
-  - We were instructed to use useEffect and axios and after some trial and error we finally managed to show one question and the answers corresponding to it. 
+   - The errors were mainly with the endpoints and the get methods.
+   - We were instructed to use useEffect and axios and after some trial and error we finally managed to show one question and the answers corresponding to it. 
 
 ---
 # Day-four
