@@ -3,8 +3,7 @@ import Page from "../../components/Page";
 import { Logout } from "./Logout";
 import Question from "./Components/Question";
 import "./pageStyles/surveyStyles.css";
-import { useEffect, useState } from "react";
-import { storageData } from "./Components/Question";
+
 
 const PING_ACTION_QUERY = gql`
   query GetQuery {
@@ -22,28 +21,7 @@ const PING_ACTION_QUERY = gql`
 export const App = () => {
   const { isSuccess, data } = useQuery("PingAction", PING_ACTION_QUERY);
 
-  const [ans, setAns] = useState([]);
-
-  function setAnswerData(data) {
-    console.log("storage", ans);
-    setAns([...ans, data]);
-  }
-
-
-  useEffect(()=> {
-    setAnswerData(storageData)
-  }, storageData)
-
-
-  useEffect(() => {
-    // console.log(ans);
-    localStorage.setItem("Answers", JSON.stringify(ans));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ans]);
-
-  useEffect(() => {
-    localStorage.getItem("Answers", JSON.stringify(ans));
-  });
+  
 
   return (
     <Page withPadding title={"Survey App"} actions={<Logout />}>

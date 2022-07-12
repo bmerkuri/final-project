@@ -1,5 +1,4 @@
-import { setAnswerData } from "../App";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   FormControl,
@@ -9,11 +8,29 @@ import {
   Radio
 } from "@mui/material";
 
-
-export let storageData;
-
 export default function Question(props) {
-  
+  const [ans, setAns] = useState();
+
+  function setAnswerData(data) {
+    setAns(data);
+    console.log("ans", data);
+  }
+
+  useEffect(() => {
+    if (localStorage.getItem("Answers") === null) {
+      if (typeof(ans) === 'object') {
+        localStorage.setItem("Answers", JSON.stringify(ans));
+      }
+    } else {
+      if (typeof(ans) === 'object') {
+        const oldStorage = localStorage.getItem("Answers");
+         localStorage.setItem("Answers", [oldStorage, JSON.stringify(ans)]);
+      }
+    }
+
+    console.log(localStorage.getItem("Answers"));
+  }, [ans]);
+
   return (
     <Box
       sx={{
@@ -28,8 +45,6 @@ export default function Question(props) {
         borderRadius: "10px",
         color: "white"
       }}
-
-      
     >
       <FormControl style={{ color: "white", textAlign: "left" }}>
         <FormLabel
@@ -51,11 +66,11 @@ export default function Question(props) {
                 control={<Radio />}
                 label={answer}
                 onChange={(e) => {
-                  storageData = {
+                  setAnswerData({
                     id: `${props?.id}`,
                     question: `${props?.question}`,
                     answer: `${e.target.value}`
-                  };
+                  });
                 }}
                 style={{ accentColor: "white", textAlign: "left" }}
               />
