@@ -20,7 +20,7 @@ The list below containes the activities we followed that day:
    - When we started discussing our areas of expertise we found out that we had pretty much the same skills.
    - I personally had more experience in java than Elvis and Frajdi and those two had more experience in react than me. 
 - Build database tables
-    -We created the tables based on the information that marco sent us.We made sure that everything was up and running. 
+    - We created the tables based on the information that marco sent us.We made sure that everything was up and running. 
 
 ---
 
