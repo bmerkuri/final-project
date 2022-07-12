@@ -1,4 +1,4 @@
-# Day-one
+# Day-one 
 - Project Description
 Skill-Matrix is a project where the main goal is to collect data from the survey.This survey will contain many questions for a large amount of users in   different timestamps. The questions will be displayed in different types.
 
@@ -120,5 +120,6 @@ The code that Elvis did was fine ,we just needed to add a JSON.stringfy() method
 
 
 
-
+Setext Heading 2
+----------------
 
