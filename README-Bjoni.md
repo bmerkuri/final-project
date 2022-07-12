@@ -1,4 +1,4 @@
-## day-one
+# Day-one
 - Project Description
 Skill-Matrix is a project where the main goal is to collect data from the survey.This survey will contain many questions for a large amount of users in   different timestamps. The questions will be displayed in different types.
 
@@ -24,7 +24,7 @@ The list below containes the activities we followed that day:
 
 ---
 
-# day-two
+# Day-two
 We started the day with a lot of motivation.We came together and started to discuss methods of implementing the template.
 We brainstormed different methods also googling some too and came to two methods which we thought were the best:
 1.  using a library called surveyjs
@@ -52,7 +52,7 @@ We basically had to start from scratch again but at least now we had a better id
 
 ---
 
-# day-three
+# Day-three
 - testing the second method for the frontend
 - 
 -We decided to test the second method and that was building the component for the questions and then calling them.
@@ -65,7 +65,7 @@ We started studying hasura functions and implementing the examples we saw.
 The rest of the day was spent trying out different way to implement hasura actions.
 
 ---
-# day-four
+# Day-four
 This day was a good day.
 We started very good and finally managed to finish the react frontend.
 We built the endpoints,fetched data from the database and fixed all the errors that came our way such as:
@@ -76,7 +76,7 @@ We built the endpoints,fetched data from the database and fixed all the errors t
 
 ---
 
-# day-five
+# Day-five
 This day progress was kind of slow.The objective of this day was to show all the questions and answers fetched from the database at once.
 We stumbled on a lof of errors at this step.
 The maain problem was how to loop through the json file to show all the questions and answers.
@@ -89,7 +89,7 @@ We still have issues regarding the answers part but hopefully we will solve them
 
 ---
 
-# day-six and day-seven
+# Day-six and Day-seven
 I gathered the team on an online call to discuss about the project.
 We had many ideas but most if not all of them were regarding the post method.
 Ervis proposed the idea of adding a column to the table answers or just creating a new table all together.
@@ -98,12 +98,12 @@ The rest of the day was spent searching and trying new methods for posting data.
 
 ---
 
-# day-eight
+# Day-eight
 Since it was a holiday,we didnt work as much so just a portion of the day was dedicated to the project.
 
 ---
 
-# day-nine
+# Day-nine
 Elvis showed us the sessions method he was working on.
 The session method allows us to store the users responses.
 We faced a couple of issues with these method:
