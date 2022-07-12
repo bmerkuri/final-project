@@ -119,6 +119,14 @@ The code that Elvis did was fine ,we just needed to add a JSON.stringfy() method
 
 
 
+---
+# References
+[Survey Example] (https://miro.com/app/board/uXjVOscQiDU=/?moveToWidget=3458764528700140377&cot=14)
+[Starter Project] (https://miro.com/app/board/uXjVOscQiDU=/?moveToWidget=3458764528700092659&cot=14)
+[React Query] (https://miro.com/app/board/uXjVOscQiDU=/?moveToWidget=3458764528706769978&cot=14)
+[Mui React] (https://miro.com/app/board/uXjVOscQiDU=/?moveToWidget=3458764528706770248&cot=14)
+[LocalStroage,Session Storage] (https://www.robinwieruch.de/local-storage-react/)
+
 
 
 [Google](www.google.com)
