@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { converter, reverseConverter } from "../logic";
 import {
   Box,
   FormControl,
@@ -25,11 +26,17 @@ export default function Question(props) {
     } else {
       if (typeof ans === "object") {
         const oldStorage = localStorage.getItem("Answers");
-        localStorage.setItem("Answers", [oldStorage, JSON.stringify(ans)]);
+        if(converter(oldStorage).find(ele => ele.id === ans.id) === undefined){
+          localStorage.setItem("Answers", [oldStorage, JSON.stringify(ans)]);
+        }
+        else {
+          const oldStorageArr = converter(oldStorage);
+          const finalArr = oldStorageArr.filter(ele => ele !== (oldStorageArr.find(ele => ele.id === ans.id)))
+          finalArr.push(ans)
+          localStorage.setItem("Answers", reverseConverter(finalArr))
+        } 
       }
     }
-
-    console.log(localStorage.getItem("Answers"));
   }, [ans]);
 
   function handleClick(e) {
