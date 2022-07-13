@@ -50,6 +50,8 @@ export default function Question(props) {
 
   console.log(score);
 
+  if(localStorage.getItem("Answers") === null){
+
   return (
     <Box
       sx={{
@@ -101,5 +103,7 @@ export default function Question(props) {
         </button>
       </FormControl>
     </Box>
-  );
+  )}else{
+    
+  }
 }
