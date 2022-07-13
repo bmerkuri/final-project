@@ -7,6 +7,9 @@ import axios from "axios";
 import { converter } from "../../features/app/logic";
 import { Button } from "@mui/material";
 import { Send } from "@mui/icons-material";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const PING_ACTION_QUERY = gql`
   query GetQuery {
@@ -55,6 +58,15 @@ export const App = () => {
       .catch((err) => {
         console.log(err);
       });
+    toast.success("You completed the form !", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined
+    });
   };
 
   return (
@@ -64,6 +76,17 @@ export const App = () => {
       actions={<Logout />}
       className="navbar"
     >
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       {isSuccess ? (
         <div className="container">
           {/* {console.log("1",answer?.answers.find(ele => ele.id === "1"))} */}
