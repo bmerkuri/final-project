@@ -27,7 +27,7 @@ export const AuthLogin = () => {
       sx={{
         p: 5,
         minWidth: 500,
-        mt: 30,
+        mt: 20,
         border: "3px solid white",
         borderColor: "primary.light"
       }}

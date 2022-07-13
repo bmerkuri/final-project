@@ -10,6 +10,7 @@ import { Send } from "@mui/icons-material";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 
 const PING_ACTION_QUERY = gql`
   query GetQuery {
@@ -27,10 +28,12 @@ const PING_ACTION_QUERY = gql`
 export const App = () => {
   const { isSuccess, data } = useQuery("PingAction", PING_ACTION_QUERY);
 
+  const [disable, setDisable] = useState(false);
+
   const ADMIN_SECRET = "hasura";
 
   const BASE_URL =
-    "https://8080-bmerkuri-finalproject-7imwg1bno2k.ws-eu54.gitpod.io/v1/graphql";
+    "https://8080-bmerkuri-finalproject-bllyu96ev1d.ws-eu53.gitpod.io/v1/graphql";
 
   const ADD_POST = gql`
     mutation MyMutation($data: json) {
@@ -108,6 +111,7 @@ export const App = () => {
           })}
           <div className="button-container">
             <Button
+              disabled={disable}
               variant="contained"
               endIcon={<Send />}
               onClick={submitAnswer}
