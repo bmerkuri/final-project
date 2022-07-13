@@ -3,4 +3,5 @@
 - "!include public_boards_admins.yaml"
 - "!include public_questions.yaml"
 - "!include public_surveys.yaml"
+- "!include public_userResponse.yaml"
 - "!include public_users.yaml"

@@ -26,31 +26,21 @@ export default function Question(props) {
     } else {
       if (typeof ans === "object") {
         const oldStorage = localStorage.getItem("Answers");
-        if(converter(oldStorage).find(ele => ele.id === ans.id) === undefined){
+        if (
+          converter(oldStorage).find((ele) => ele.id === ans.id) === undefined
+        ) {
           localStorage.setItem("Answers", [oldStorage, JSON.stringify(ans)]);
-        }
-        else {
+        } else {
           const oldStorageArr = converter(oldStorage);
-          const finalArr = oldStorageArr.filter(ele => ele !== (oldStorageArr.find(ele => ele.id === ans.id)))
-          finalArr.push(ans)
-          localStorage.setItem("Answers", reverseConverter(finalArr))
-        } 
+          const finalArr = oldStorageArr.filter(
+            (ele) => ele !== oldStorageArr.find((ele) => ele.id === ans.id)
+          );
+          finalArr.push(ans);
+          localStorage.setItem("Answers", reverseConverter(finalArr));
+        }
       }
     }
   }, [ans]);
-
-  function handleClick(e) {
-    if (`${e.target.value}` === `${ans.answers[0]}`) {
-      setScore(10);
-    } else {
-      setScore(0);
-    }
-    console.log("Score", score);
-  }
-
-  console.log(score);
-
-  if(localStorage.getItem("Answers") === null){
 
   return (
     <Box
@@ -98,12 +88,7 @@ export default function Question(props) {
             );
           })}
         </RadioGroup>
-        <button type="Submit" onClick={handleClick}>
-          Save
-        </button>
       </FormControl>
     </Box>
-  )}else{
-    
-  }
+  );
 }

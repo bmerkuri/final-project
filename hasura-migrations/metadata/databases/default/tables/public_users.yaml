@@ -9,3 +9,10 @@ array_relationships:
         table:
           name: boards_admins
           schema: public
+  - name: userResponses
+    using:
+      foreign_key_constraint_on:
+        column: id
+        table:
+          name: userResponse
+          schema: public

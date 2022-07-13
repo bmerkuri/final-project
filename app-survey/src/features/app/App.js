@@ -3,6 +3,8 @@ import Page from "../../components/Page";
 import { Logout } from "./Logout";
 import Question from "./Components/Question";
 import "./pageStyles/surveyStyles.css";
+import axios from "axios";
+import { converter } from "../../features/app/logic";
 
 const PING_ACTION_QUERY = gql`
   query GetQuery {
@@ -19,6 +21,39 @@ const PING_ACTION_QUERY = gql`
 
 export const App = () => {
   const { isSuccess, data } = useQuery("PingAction", PING_ACTION_QUERY);
+
+  const ADMIN_SECRET = "hasura";
+
+  const BASE_URL =
+    "https://8080-bmerkuri-finalproject-7imwg1bno2k.ws-eu54.gitpod.io/v1/graphql";
+
+  const ADD_POST = gql`
+    mutation MyMutation($data: json) {
+      insert_userResponse_one(object: { data: $data }) {
+        data
+      }
+    }
+  `;
+
+  const submitAnswer = () => {
+    axios({
+      url: BASE_URL,
+      method: "POST",
+      headers: {
+        "x-hasura-admin-secret": ADMIN_SECRET
+      },
+      data: {
+        variables: {
+          data: [converter(localStorage.getItem("Answers"))]
+        },
+        query: ADD_POST
+      }
+    })
+      .then((res) => console.log(res.data))
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <Page withPadding title={"Survey App"} actions={<Logout />}>
@@ -41,6 +76,10 @@ export const App = () => {
               />
             );
           })}
+
+          <div>
+            <button onClick={submitAnswer}>Save</button>
+          </div>
         </div>
       ) : (
         "loading time..."
