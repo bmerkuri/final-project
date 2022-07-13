@@ -10,7 +10,7 @@ import { Send } from "@mui/icons-material";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PING_ACTION_QUERY = gql`
   query GetQuery {
@@ -29,6 +29,16 @@ export const App = () => {
   const { isSuccess, data } = useQuery("PingAction", PING_ACTION_QUERY);
 
   const [disable, setDisable] = useState(false);
+
+  const win = window.sessionStorage;
+
+  useEffect(() => {
+    if (win.getItem("Button")) setDisable(win.getItem("Button"));
+  }, [win]);
+
+  useEffect(() => {
+    win.setItem("Button", disable);
+  }, [disable, win]);
 
   const ADMIN_SECRET = "hasura";
 
@@ -70,6 +80,10 @@ export const App = () => {
       draggable: true,
       progress: undefined
     });
+    setTimeout(function(){
+      window.location.reload();
+   }, 6000);
+
   };
 
   return (
