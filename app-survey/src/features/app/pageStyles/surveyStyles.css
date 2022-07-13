@@ -1,7 +1,17 @@
-.container{
-    background-image: url("./images/—Pngtree—poster\ background\ promotional\ background\ pseudo_946888.jpg");
-    padding: 2rem;
-    margin: 0;
-    background-size: cover;
-    border-radius: 9px;
+.container {
+  background-image: url("./images/—Pngtree—poster\ background\ promotional\ background\ pseudo_946888.jpg");
+  padding: 2rem;
+  margin: 0;
+  background-size: cover;
+  border-radius: 9px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25%;
+}
+
+.navbar {
+  text-align: center;
 }

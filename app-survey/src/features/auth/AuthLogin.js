@@ -14,9 +14,8 @@ export const AuthLogin = () => {
   useEffect(() => {
     const token = localStorage.getItem("at");
     token !== null && login(token);
-     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
 
   return (
     <Paper
@@ -27,11 +26,16 @@ export const AuthLogin = () => {
       }}
       sx={{
         p: 5,
-        minWidth: 500
+        minWidth: 500,
+        mt: 30,
+        border: "3px solid white",
+        borderColor: "primary.light"
       }}
     >
       <Box sx={{ mb: 2 }}>
-        <Typography variant="h4">Survey App</Typography>
+        <Typography variant="h4" textAlign="center">
+          Survey App
+        </Typography>
       </Box>
       <Box sx={{ mb: 2 }}>
         <TextField

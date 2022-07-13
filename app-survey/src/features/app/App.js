@@ -5,6 +5,8 @@ import Question from "./Components/Question";
 import "./pageStyles/surveyStyles.css";
 import axios from "axios";
 import { converter } from "../../features/app/logic";
+import { Button } from "@mui/material";
+import { Send } from "@mui/icons-material";
 
 const PING_ACTION_QUERY = gql`
   query GetQuery {
@@ -56,7 +58,12 @@ export const App = () => {
   };
 
   return (
-    <Page withPadding title={"Survey App"} actions={<Logout />}>
+    <Page
+      withPadding
+      title={"Survey App"}
+      actions={<Logout />}
+      className="navbar"
+    >
       {isSuccess ? (
         <div className="container">
           {/* {console.log("1",answer?.answers.find(ele => ele.id === "1"))} */}
@@ -76,9 +83,14 @@ export const App = () => {
               />
             );
           })}
-
-          <div>
-            <button onClick={submitAnswer}>Save</button>
+          <div className="button-container">
+            <Button
+              variant="contained"
+              endIcon={<Send />}
+              onClick={submitAnswer}
+            >
+              Send
+            </Button>
           </div>
         </div>
       ) : (

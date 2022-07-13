@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import Image from "../auth/Img.jpg";
 
 export const PageWrapper = (props) => (
   <Box
@@ -8,7 +9,8 @@ export const PageWrapper = (props) => (
       justifyContent: "center",
       alignItems: "flex-start",
       height: "100vh",
-      backgroundColor: "primary.light",
+      backgroundImage: `url(${Image})`,
+      backgroundSize: "cover",
       border: "1px solid white",
       borderColor: "primary.light",
       overflow: "scroll",
