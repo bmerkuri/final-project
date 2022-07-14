@@ -100,7 +100,7 @@ INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","
 VALUES(3,3,3,3,10,'{"opsion1":"NodeJs","opsion2":"Laravel","opsion3":"Django"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(4,4,4,4,10,'{"opsion1":"Python","opsion2":"Java","opsion3":"Javascript"}');
+VALUES(4,4,4,4,10,'{"opsion1":"Python","opsion2":"Ruby","opsion3":"Javascript"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
 VALUES(5,5,5,5,10,'{"opsion1":"Java","opsion2":"Ruby","opsion3":"C"}');
