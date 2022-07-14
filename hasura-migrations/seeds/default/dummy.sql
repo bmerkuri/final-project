@@ -109,7 +109,7 @@ INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","
 VALUES(6,6,6,6,10,'{"opsion1":"Programming Language","opsion2":"Framework","opsion3":"Tool"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(7,7,7,7,10,'{"opsion1":"Programming Language","opsion2":"Hypertext Markup Language","opsion3":"Framework"}');
+VALUES(7,7,7,7,10,'{"opsion1":"Smthng Else","opsion2":"Hypertext Markup Language","opsion3":"Backend`"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
 VALUES(8,8,8,8,10,'{"opsion1":"Google","opsion2":"Microsoft","opsion3":"By me"}');
