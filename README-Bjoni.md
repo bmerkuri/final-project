@@ -120,12 +120,30 @@ The code that Elvis did was fine ,we just needed to add a JSON.stringfy() method
 
 
 ---
+# Day-ten
+This day was a very hard day for us.
+We were informed by Semra that we would present on Tuseday and we were behind schedule .
+So basically the day was spent just rushing to finish the code or at least 90% of it.
+We were focused on building the session.We faced tons of errors in it especially on the logic of storing data on localstorage.
+We later fixed this issues by building a sperate logic file and it worked out fine.
+Another thing we had to add was the post method ,to add the answers to the database.
+We build the mutation and to actually make the post method we got inspiration from one of hasura weeks,where we build a todo app.
+After these were done ,we did some design revisions.
+We also built the Send(submit) button to the form as well as the functionality of the button.
+Elvis later added a really cool feature to the form,using Toast,which displyed an cool looking alert when the form was submitted.
+
+---
+# Day-eleven a.k.a presentation day
+This day was spent mostly fixing last minutes errors and also adding the progress bar(which we forgot)
+
+
 # References
 1. [Survey Example](https://miro.com/app/board/uXjVOscQiDU=/?moveToWidget=3458764528700140377&cot=14)
 2. [Starter Project](https://miro.com/app/board/uXjVOscQiDU=/?moveToWidget=3458764528700092659&cot=14)
 3. [React Query](https://miro.com/app/board/uXjVOscQiDU=/?moveToWidget=3458764528706769978&cot=14)
 4. [Mui React](https://miro.com/app/board/uXjVOscQiDU=/?moveToWidget=3458764528706770248&cot=14)
 5. [LocalStroage,Session Storage](https://www.robinwieruch.de/local-storage-react/)
+6. [Toast](https://www.npmjs.com/package/react-toastify)
 
 
 
