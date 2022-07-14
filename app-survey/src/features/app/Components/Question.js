@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { converter, reverseConverter } from "../logic";
+import { converter, reverseConverter , storageExists} from "../logic";
 import {
   Box,
   FormControl,
@@ -13,9 +13,11 @@ export default function Question(props) {
   const [ans, setAns] = useState();
   const [score, setScore] = useState(0);
 
+  const prevAnswers = storageExists(localStorage.getItem("Answers"))
+
   function setAnswerData(data) {
     setAns(data);
-    console.log("ans", data);
+    console.log(prevAnswers.find((ele) => ele.answer === "30%")===undefined);
   }
 
   useEffect(() => {
@@ -71,21 +73,42 @@ export default function Question(props) {
           style={{ color: "white", textAlign: "left" }}
         >
           {Object.values(props?.answers?.data).map((answer) => {
-            return (
-              <FormControlLabel
-                value={answer}
-                control={<Radio />}
-                label={answer}
-                onChange={(e) => {
-                  setAnswerData({
-                    id: `${props?.id}`,
-                    question: `${props?.question}`,
-                    answer: `${e.target.value}`
-                  });
-                }}
-                style={{ accentColor: "white", textAlign: "left" }}
-              />
-            );
+            if (prevAnswers.find((ele) => ele.answer === answer) !== undefined) {
+              return (
+                <FormControlLabel
+                  value={answer}
+                  control={<Radio />}
+                  label={answer}
+                  checked={true}
+                  onChange={(e) => {
+                    setAnswerData({
+                      id: `${props?.id}`,
+                      question: `${props?.question}`,
+                      answer: `${e.target.value}`
+                    });
+                  }}
+                  style={{ accentColor: "white", textAlign: "left" }}
+                />
+              );
+            }
+            else {
+              return (
+                <FormControlLabel
+                  value={answer}
+                  control={<Radio />}
+                  label={answer}
+                  
+                  onChange={(e) => {
+                    setAnswerData({
+                      id: `${props?.id}`,
+                      question: `${props?.question}`,
+                      answer: `${e.target.value}`
+                    });
+                  }}
+                  style={{ accentColor: "white", textAlign: "left" }}
+                />
+              );
+            }
           })}
         </RadioGroup>
       </FormControl>

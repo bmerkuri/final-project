@@ -13,3 +13,11 @@ export function reverseConverter(arr){
     const result = stringsArr.join(",");
     return result;
 }
+
+export function storageExists(storage){
+    if(storage === null){
+        return [];
+    }else{
+        return converter(storage)
+    }
+}
