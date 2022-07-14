@@ -94,7 +94,7 @@ INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","
 VALUES(1,1,1,1,10,'{"opsion1":"30%","opsion2":"60%","opsion3":"90%"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(2,2,2,2,10,'{"opsion1":"Javascript","opsion2":"Php","opsion3":"C#"}');
+VALUES(2,2,2,2,10,'{"opsion1":"Kotlin","opsion2":"Php","opsion3":"C#"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
 VALUES(3,3,3,3,10,'{"opsion1":"NodeJs","opsion2":"Laravel","opsion3":"Django"}');
