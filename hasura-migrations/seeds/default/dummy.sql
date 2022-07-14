@@ -94,7 +94,7 @@ INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","
 VALUES(1,1,1,1,10,'{"opsion1":"30%","opsion2":"60%","opsion3":"90%"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(2,2,2,2,10,'{"opsion1":"Javascript","opsion2":"Php","opsion3":"Ruby"}');
+VALUES(2,2,2,2,10,'{"opsion1":"Javascript","opsion2":"Php","opsion3":"C#"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
 VALUES(3,3,3,3,10,'{"opsion1":"NodeJs","opsion2":"Laravel","opsion3":"Django"}');
@@ -103,7 +103,7 @@ INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","
 VALUES(4,4,4,4,10,'{"opsion1":"Python","opsion2":"Ruby","opsion3":"Javascript"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
-VALUES(5,5,5,5,10,'{"opsion1":"Java","opsion2":"Ruby","opsion3":"C"}');
+VALUES(5,5,5,5,10,'{"opsion1":"Java","opsion2":"Go","opsion3":"C"}');
 
 INSERT INTO "public"."answers"("id","board_id","user_id","question_id","score","data")
 VALUES(6,6,6,6,10,'{"opsion1":"Programming Language","opsion2":"Framework","opsion3":"Tool"}');
