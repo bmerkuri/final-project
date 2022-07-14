@@ -4,13 +4,14 @@ import { Logout } from "./Logout";
 import Question from "./Components/Question";
 import "./pageStyles/surveyStyles.css";
 import axios from "axios";
-import { converter } from "../../features/app/logic";
+import { converter , storageExists, reverseConverter} from "../../features/app/logic";
 import { Button } from "@mui/material";
 import { Send } from "@mui/icons-material";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
+import {CircularProgressWithLabel} from "./Components/ProgressBar"
 
 const PING_ACTION_QUERY = gql`
   query GetQuery {
@@ -52,6 +53,15 @@ export const App = () => {
       }
     }
   `;
+
+  function progres(array){
+    if(Array.isArray(array)){
+      return array;
+    }
+    else {
+      return converter(array)
+    }
+    }
 
   const submitAnswer = () => {
     axios({
@@ -132,7 +142,10 @@ export const App = () => {
             >
               Send
             </Button>
-          </div>
+            <div className="progresContainer">
+            <CircularProgressWithLabel value={(storageExists(localStorage.getItem("Answers")).length / data?.questions.length * 100)} />
+            </div>
+          </div>          
         </div>
       ) : (
         "loading time..."

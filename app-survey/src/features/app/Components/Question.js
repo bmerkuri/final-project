@@ -11,7 +11,7 @@ import {
 
 export default function Question(props) {
   const [ans, setAns] = useState();
-  const [score, setScore] = useState(0);
+
 
   const prevAnswers = storageExists(localStorage.getItem("Answers"))
 
